@@ -15,6 +15,8 @@
 <meta property="og:url" content="https://bon214.github.io/lumie-skin-lp/">
 <link rel="canonical" href="https://bon214.github.io/lumie-skin-lp/">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./motion.css">
+<script src="./motion.js"></script>
 <script src="./support.js"></script>
 </head>
 <body>
@@ -88,7 +90,7 @@
         <p style="margin:22px 0 0; font-size:11.5px; color:#A7ADA3; letter-spacing:.04em">※ 自主制作の架空商品です。実際に購入することはできません。</p>
       </div>
       <div style="flex:1 1 320px; min-width:min(100%,300px); display:flex; justify-content:center" data-reveal="1">
-        <img src="assets/images/calm-veil-serum.jpg" alt="乳白色のすりガラスとローズ色のスポイトを使った LUMIE SKIN Calm Veil Serum 30mL" width="1200" height="1200" fetchpriority="high" style="display:block; width:min(100%,420px); height:auto; border-radius:4px">
+        <div data-photo-frame="1" style="width:min(100%,420px); aspect-ratio:1 / 1; overflow:hidden; border-radius:4px"><img src="assets/images/calm-veil-serum.jpg" alt="乳白色のすりガラスとローズ色のスポイトを使った LUMIE SKIN Calm Veil Serum 30mL" width="1200" height="1200" fetchpriority="high" style="display:block; width:100%; height:100%; object-fit:cover"></div>
       </div>
     </div>
   </section>
@@ -123,7 +125,7 @@
   <section style="padding:clamp(72px,11vw,140px) 0">
     <div style="max-width:1120px; margin:0 auto; padding:0 clamp(20px,5vw,40px); display:flex; flex-wrap:wrap; gap:clamp(32px,6vw,80px); align-items:center">
       <div style="flex:1 1 300px; min-width:min(100%,280px)" data-reveal="1">
-        <img src="assets/images/daily-ritual.jpg" alt="朝の柔らかな光が差す石の台に置いた美容液とリネン" width="1200" height="900" loading="lazy" decoding="async" style="display:block; width:100%; height:auto; border-radius:2px">
+        <div data-photo-frame="1" style="width:min(100%,100%); aspect-ratio:4 / 3; overflow:hidden; border-radius:4px"><img src="assets/images/daily-ritual.jpg" alt="朝の柔らかな光が差す石の台に置いた美容液とリネン" width="1200" height="900" loading="lazy" decoding="async" style="display:block; width:100%; height:100%; object-fit:cover"></div>
       </div>
       <div style="flex:1 1 340px; min-width:min(100%,300px)" data-reveal="1">
         <p style="margin:0 0 18px; font-family:Georgia, serif; font-size:11.5px; letter-spacing:.28em; color:#A7ADA3; text-transform:uppercase">Concept</p>
@@ -205,7 +207,7 @@
     <div style="max-width:1120px; margin:0 auto; padding:0 clamp(20px,5vw,40px)">
       <div style="display:flex; flex-wrap:wrap; gap:clamp(32px,5vw,68px); align-items:center">
         <div style="flex:1 1 280px; min-width:min(100%,260px)" data-reveal="1">
-          <img src="assets/images/serum-texture-v2.jpg" alt="ガラスのスポイトから落ちる透明でみずみずしい美容液の一滴" width="1200" height="1200" loading="lazy" decoding="async" style="display:block; width:100%; height:auto; border-radius:2px">
+          <div data-photo-frame="1" style="width:min(100%,100%); aspect-ratio:1 / 1; overflow:hidden; border-radius:4px"><img src="assets/images/serum-texture-v2.jpg" alt="ガラスのスポイトから落ちる透明でみずみずしい美容液の一滴" width="1200" height="1200" loading="lazy" decoding="async" style="display:block; width:100%; height:100%; object-fit:cover"></div>
           <p style="margin:14px 0 0; font-size:11.5px; color:#A7ADA3; letter-spacing:.06em">とろみを抑えた、みずみずしいテクスチャー。</p>
         </div>
         <div style="flex:1 1 340px; min-width:min(100%,300px)">
@@ -296,7 +298,7 @@
   <section style="padding:clamp(72px,10vw,132px) 0">
     <div style="max-width:1120px; margin:0 auto; padding:0 clamp(20px,5vw,40px); display:flex; flex-wrap:wrap; gap:clamp(30px,5vw,64px); align-items:center">
       <div style="flex:1 1 240px; min-width:min(100%,220px); display:flex; justify-content:center" data-reveal="1">
-        <img src="assets/images/calm-veil-serum.jpg" alt="LUMIE SKIN Calm Veil Serum 30mL の商品イメージ" width="1200" height="1200" loading="lazy" decoding="async" style="display:block; width:min(100%,360px); height:auto; border-radius:4px">
+        <div data-photo-frame="1" style="width:min(100%,360px); aspect-ratio:1 / 1; overflow:hidden; border-radius:4px"><img src="assets/images/calm-veil-serum.jpg" alt="LUMIE SKIN Calm Veil Serum 30mL の商品イメージ" width="1200" height="1200" loading="lazy" decoding="async" style="display:block; width:100%; height:100%; object-fit:cover"></div>
       </div>
       <div style="flex:1 1 340px; min-width:min(100%,300px)" data-reveal="1">
         <h2 style="margin:0 0 22px; font-family:'Noto Serif JP','Yu Mincho',serif; font-weight:400; font-size:clamp(21px,3.2vw,33px); line-height:1.65; letter-spacing:.03em">肌と向き合う時間を、<br>もう少し心地よく。</h2>
@@ -367,29 +369,20 @@ class Component extends DCLogic {
     };
     window.addEventListener('keydown', this.onKey);
 
-    if (!this.reduce) {
-      const els = Array.from(this.root().querySelectorAll('[data-reveal]'));
-      els.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(18px)';
-        el.style.transition = 'opacity .8s ease, transform .8s ease';
-      });
-      this.io = new IntersectionObserver(ents => {
-        ents.forEach(e => {
-          if (!e.isIntersecting) return;
-          e.target.style.opacity = '1';
-          e.target.style.transform = 'none';
-          this.io.unobserve(e.target);
-        });
-      }, { rootMargin: '0px 0px -6% 0px', threshold: 0.06 });
-      els.forEach(el => this.io.observe(el));
+    this.stopMotion = window.LumieMotion?.mount(this.root(), this.props.animate !== false);
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.animate !== this.props.animate) {
+      this.stopMotion?.();
+      this.stopMotion = window.LumieMotion?.mount(this.root(), this.props.animate !== false);
     }
   }
 
   componentWillUnmount() {
     window.removeEventListener('resize', this.onResize);
     window.removeEventListener('keydown', this.onKey);
-    if (this.io) this.io.disconnect();
+    this.stopMotion?.();
     document.body.style.overflow = '';
   }
 
@@ -414,8 +407,6 @@ class Component extends DCLogic {
   };
 
   renderVals() {
-    const animate = this.props.animate ?? true;
-    if (this.reduce === false && animate === false && this.io) { this.io.disconnect(); this.io = null; }
     const mobile = this.state.w < 900;
     const narrow = this.state.w < 720;
     const sticky = (this.props.stickyCta ?? true) && narrow && !this.state.modal;

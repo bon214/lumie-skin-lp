@@ -1,0 +1,18 @@
+/* Motion has no hidden resting state: content remains readable if JS fails. */
+.lumie-motion > header { transition: box-shadow .5s ease, background .5s ease; }
+.lumie-motion > header.lumie-scrolled { box-shadow: 0 5px 24px -18px rgba(60,55,52,.3); }
+.lumie-motion > header::after { content: ''; position: absolute; left: 0; bottom: -1px; width: 100%; height: 2px; background: linear-gradient(90deg,#D8B8AD,#8C5F57); transform: scaleX(var(--lumie-progress,0)); transform-origin: left; pointer-events: none; }
+.lumie-motion .lumie-photo { transform: translateY(var(--lumie-y,0px)) scale(var(--lumie-scale,1)); transform-origin: center; }
+.lumie-motion [data-photo-frame] { overflow: hidden; border-radius: 4px; isolation: isolate; position: relative; }
+.lumie-motion [data-photo-frame]::after { content: ''; position: absolute; inset: 0; background: linear-gradient(115deg,rgba(255,253,252,.65),transparent 58%); opacity: var(--lumie-light,.2); pointer-events: none; }
+@media (hover:hover) and (pointer:fine) {
+  .lumie-motion a, .lumie-motion button { transition: color .3s ease, background .3s ease, box-shadow .4s ease, translate .4s ease; }
+  .lumie-motion button:hover, .lumie-motion a[href="#price"]:hover { translate: 0 -2px; box-shadow: 0 10px 22px -14px rgba(140,95,87,.5); }
+  .lumie-motion nav a { position: relative; }
+  .lumie-motion nav a:not([href="#price"])::after { content: ''; position: absolute; bottom: 4px; left: 0; width: 100%; height: 1px; background: currentColor; transform: scaleX(0); transform-origin: left; transition: transform .4s ease; }
+  .lumie-motion nav a:hover::after { transform: scaleX(1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .lumie-photo { transform: none !important; }
+  .lumie-motion > header::after { display: none; }
+}
