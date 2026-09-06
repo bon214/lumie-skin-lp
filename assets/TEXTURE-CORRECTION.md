@@ -1,0 +1,7 @@
+
+## Texture correction (v2)
+
+Method: built-in image_gen edit. User-provided image used only as pipette geometry reference.
+
+Use case: precise-object-edit. Image 1 is the EDIT TARGET, existing square warm ivory serum macro photo. Image 2 is a SHAPE REFERENCE supplied by the user: an anatomically correct smooth cosmetic pipette tip. Fix ONLY the glass pipette and drop region of image 1. Preserve its warm ivory ceramic backdrop, light, square composition, diagonal pipette entering upper right, clear watery serum pool, natural taupe shadows and transparent serum color. Replace the malformed lumpy stacked-glass tip with one clean manufactured glass tube, continuously tapering into a short straight narrow cylindrical nozzle aligned with the main tube axis, terminating in one smooth rounded circular open rim, like the reference. Glass walls must be smooth with uninterrupted edges: NO beads, bulges, knots, rings, stacked spheres, warped joints or jagged refractions. The nozzle is glass, visibly distinct from the liquid. One small clear teardrop hangs vertically DOWN under gravity from the lowest point of the rim. A little air gap separates the suspended drop from the existing liquid pool. Accurate smooth contours, plausible optical refraction, photorealistic luxury skincare macro photography. Use the reference ONLY for correct pipette geometry, do not copy its pink opaque liquid or pure white background. Keep the original calm warm lighting and clear low-viscosity serum. No text.
+
