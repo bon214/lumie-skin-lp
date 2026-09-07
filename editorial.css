@@ -183,3 +183,7 @@
   .ingredient-list article:first-child { border-top:0; }
   .ingredient-index { margin-bottom:10px; }
 }
+
+/* Use the supplied vector lockup in all brand-signature placements. */
+.signature img { display:block; width:180px; max-width:100%; height:auto; }
+.editorial-footer .footer-wordmark img { display:block; width:100%; height:auto; }
