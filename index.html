@@ -16,8 +16,8 @@
 <link rel="canonical" href="https://bon214.github.io/lumie-skin-lp/">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="./motion.css">
-<link rel="stylesheet" href="./page.css">
-<script src="./motion.js"></script>
+<link rel="stylesheet" href="./page.css?v=hero2">
+<script src="./motion.js?v=hero2"></script>
 <script src="./support.js"></script>
 </head>
 <body>
@@ -43,7 +43,7 @@
 
 <div id="top" style="width:100%; background:#F7F3EE; padding-bottom:{{ bottomPad }}">
 
-  <header style="position:sticky; top:0; z-index:60; background:rgba(247,243,238,.94); backdrop-filter:blur(12px); border-bottom:1px solid rgba(167,173,163,.3)">
+  <header data-menu-open="{{ navExpanded }}" style="position:sticky; top:0; z-index:60; background:rgba(247,243,238,.94); backdrop-filter:blur(12px); border-bottom:1px solid rgba(167,173,163,.3)">
     <div style="max-width:1120px; margin:0 auto; padding:0 clamp(20px,5vw,40px); height:68px; display:flex; align-items:center; justify-content:space-between; gap:20px">
       <a href="#top" aria-label="LUMIE SKIN ホームへ" style="display:flex; align-items:center; text-decoration:none" style-focus="outline:2px solid #8C5F57; outline-offset:6px">
         <img src="lumie-logo.svg" alt="LUMIE SKIN" style="height:17px; width:auto; display:block">
@@ -72,28 +72,31 @@
     </div>
   </header>
 
-  <section id="hero" aria-labelledby="hero-title" style="padding:clamp(48px,7vw,88px) 0 clamp(56px,8vw,104px)">
-    <div class="hero-grid" data-image-side="{{ heroImageSide }}">
-      <div class="hero-intro" data-reveal="1">
-        <p style="margin:0 0 14px; font-family:Georgia, serif; font-size:clamp(15px,1.6vw,17px); letter-spacing:.14em; color:#8C5F57">Calm Veil Serum</p>
-        <h1 id="hero-title" style="margin:0 0 24px; font-family:'Noto Serif JP','Yu Mincho',serif; font-weight:400; font-size:clamp(27px,4.4vw,44px); line-height:1.55; letter-spacing:.03em; color:#3C3734">ゆらぎやすい毎日に、<br>うるおいの余白を。</h1>
+  <section id="hero" class="hero-fullscreen" aria-labelledby="hero-title">
+    <div class="hero-background" aria-hidden="true">
+      <img class="hero-background-image" src="assets/images/lumie-fullscreen-hero-v1.jpg" alt="" width="1672" height="941" fetchpriority="high" decoding="async">
+    </div>
+    <div class="hero-copy" data-reveal="1">
+      <p class="hero-eyebrow">Calm Veil Serum <span>／ 保湿美容液</span></p>
+      <h1 id="hero-title">ゆらぎやすい毎日に、<br>うるおいの余白を。</h1>
+      <a id="hero-cta" class="hero-button" href="#price">商品・価格を見る<span aria-hidden="true"> →</span></a>
+    </div>
+    <a class="hero-scroll" href="#hero-summary"><span aria-hidden="true">↓</span> 商品を知る</a>
+  </section>
+
+  <section id="hero-summary" class="hero-summary" aria-label="商品の概要">
+    <div class="hero-summary-inner">
+      <div>
+        <p class="hero-summary-name">Calm Veil Serum <span>30mL</span></p>
+        <p class="hero-summary-description">朝のメイク前にも、夜のシンプルなケアにも。<br>化粧水のあとに使う、軽い使用感の保湿美容液。</p>
+        <a href="#ingredients">配合成分を見る →</a>
       </div>
-      <div class="hero-details" data-reveal="1">
-        <p style="margin:0 0 24px; max-width:30em; font-size:clamp(14px,1.5vw,15.5px); color:rgba(60,55,52,.82)">朝のメイク前にも、夜のシンプルなケアにも。化粧水のあとに使う、軽い使用感の保湿美容液。</p>
-        <div style="display:flex; flex-wrap:wrap; align-items:baseline; gap:8px 18px; padding:20px 0 22px; border-top:1px solid rgba(167,173,163,.4); border-bottom:1px solid rgba(167,173,163,.4)">
-          <span style="font-size:13px; letter-spacing:.1em; color:#646B62">美容液 30mL / 約1か月</span>
-          <span style="font-size:13px; color:#716A65; text-decoration:line-through">通常 4,400円（税込）</span>
-          <span style="display:flex; align-items:baseline; gap:6px; color:#8C5F57"><span style="font-size:13px; letter-spacing:.08em">初回限定</span><strong style="font-family:Georgia, serif; font-size:clamp(26px,3.4vw,34px); font-weight:400; letter-spacing:.02em">2,980</strong><span style="font-size:13px">円（税込）</span></span>
-        </div>
-        <div class="hero-actions" style="display:flex; flex-wrap:wrap; gap:14px; margin-top:24px">
-          <a id="hero-cta" href="#price" style="display:inline-flex; align-items:center; justify-content:center; min-height:56px; padding:0 34px; background:#8C5F57; color:#FFFDFC; font-size:15px; letter-spacing:.06em; text-decoration:none; border-radius:999px; transition:background .3s ease, transform .3s ease" style-hover="background:#744B45; transform:translateY(-1px)" style-focus="outline:2px solid #3C3734; outline-offset:3px">商品・価格を見る</a>
-          <a href="#ingredients" style="display:inline-flex; align-items:center; justify-content:center; min-height:56px; padding:0 28px; background:transparent; color:#3C3734; font-size:14.5px; text-decoration:none; border:1px solid rgba(140,95,87,.45); border-radius:999px; transition:border-color .3s ease" style-hover="border-color:#8C5F57" style-focus="outline:2px solid #8C5F57; outline-offset:3px">配合成分を見る</a>
-        </div>
-        <p style="margin:22px 0 0; font-size:13px; color:#646B62; letter-spacing:.04em">※ 自主制作の架空商品です。実際に購入することはできません。</p>
+      <div class="hero-summary-price">
+        <p class="hero-regular">通常 4,400円（税込）</p>
+        <p class="hero-offer"><span>初回限定</span> <strong>2,980</strong><span>円（税込）</span></p>
+        <p>送料無料／定期購入ではありません</p>
       </div>
-      <div class="hero-photo" data-reveal="1">
-        <div data-photo-frame="1" style="width:min(100%,420px); aspect-ratio:1 / 1; overflow:hidden; border-radius:4px"><img src="assets/images/calm-veil-serum.jpg" alt="乳白色のすりガラスとローズ色のスポイトを使った LUMIE SKIN Calm Veil Serum 30mL" width="1200" height="1200" fetchpriority="high" style="display:block; width:100%; height:100%; object-fit:cover"></div>
-      </div>
+      <p class="hero-disclaimer">※ 自主制作の架空商品です。実際に購入することはできません。</p>
     </div>
   </section>
 
@@ -352,7 +355,7 @@
 
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;stickyCta&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;挙動&quot;},&quot;animate&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;挙動&quot;},&quot;heroImageSide&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;right&quot;,&quot;left&quot;],&quot;default&quot;:&quot;right&quot;,&quot;tsType&quot;:&quot;'right' | 'left'&quot;,&quot;section&quot;:&quot;レイアウト&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;stickyCta&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;挙動&quot;}, &quot;animate&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;挙動&quot;}}">
 class Component extends DCLogic {
   state = { w: window.innerWidth, nav: false, modal: false, faq: 1, pastHero: false };
   closeRef = React.createRef();
@@ -390,12 +393,13 @@ class Component extends DCLogic {
     if (this.ctaFrame) return;
     this.ctaFrame = requestAnimationFrame(() => {
       this.ctaFrame = 0;
-      const hero = document.getElementById('hero-cta');
+      const hero = document.getElementById('hero');
+      this.root().querySelector('header').classList.toggle('has-scrolled', window.scrollY > 24);
       const visible = id => {
         const rect = document.getElementById(id).getBoundingClientRect();
         return rect.bottom > 68 && rect.top < window.innerHeight;
       };
-      const pastHero = !!hero && hero.getBoundingClientRect().bottom <= 68 && !visible('price') && !visible('closing') && this.root().querySelector('footer').getBoundingClientRect().top >= window.innerHeight;
+      const pastHero = !!hero && hero.getBoundingClientRect().bottom <= 68 && !visible('hero-summary') && !visible('price') && !visible('closing') && this.root().querySelector('footer').getBoundingClientRect().top >= window.innerHeight;
       if (pastHero !== this.state.pastHero) this.setState({ pastHero });
     });
   };
@@ -467,7 +471,6 @@ class Component extends DCLogic {
       closeNav: () => this.setState({ nav: false }),
       stickyDisplay: sticky ? 'flex' : 'none',
       bottomPad: reserveSticky ? 'calc(84px + env(safe-area-inset-bottom))' : '0px',
-      heroImageSide: this.props.heroImageSide ?? 'right',
       modalDisplay: this.state.modal ? 'flex' : 'none',
       openModal: this.openModal, closeModal: this.closeModal, closeRef: this.closeRef
     }, faqVals);

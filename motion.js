@@ -8,7 +8,7 @@ window.LumieMotion = {
       if (!enabled || media.matches || !root || !('IntersectionObserver' in window)) return;
       const animations = new Set();
       const observed = new Set();
-      const photos = [...root.querySelectorAll('img[src^="assets/images/"]')];
+      const photos = [...root.querySelectorAll('img[src^="assets/images/"]:not(.hero-background-image)')];
       const hero = root.querySelector('section');
       const header = root.querySelector('header');
       let frame = 0;
@@ -23,6 +23,11 @@ window.LumieMotion = {
         a.oncancel = release;
       }
       const easing = 'cubic-bezier(.22, 1, .36, 1)';
+      const heroImage = root.querySelector('.hero-background-image');
+      if (heroImage) animate(heroImage, [
+        {opacity: .65, transform: 'scale(1.025)'},
+        {opacity: 1, transform: 'scale(1)'}
+      ], {duration: 1800, easing});
       const observer = new IntersectionObserver(entries => {
         entries.forEach(({target, isIntersecting}) => {
           if (!isIntersecting) return;
