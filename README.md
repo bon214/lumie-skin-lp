@@ -97,3 +97,12 @@ HTML冒頭のfront matter、`{% raw %}` / `{% endraw %}`、`__LUMIE_RELEASE__` �
 `python3 scripts/preview.py` で公開時の置換を再現したプレビューを起動します（localhost:8765）。ファイル変更ごとにプレビュー用更新番号も変わるため、タブを開いたままの更新動作を確認できます。本番のJekyll自体の動作確認はGitHub Pagesの公開結果で行います。
 
 `node --test tests/site-update.test.cjs` で更新検知・操作待機・通信失敗・未反映ページ・連続リロード防止を確認できます。
+
+
+## Figma Frameの文言・フッターロゴ反映（2026-09-08）
+
+参照: https://www.figma.com/design/RuUpFzyLlxrevvTQeWkmue/Untitled?node-id=21-3904
+
+Frame `21:3904` の文言を採用。コンセプト文、「あなたの毎日に」「まずは一本から」「いつもの時間を少しだけ丁寧に」「さらに心地よく」を更新し、送料無料表記と重複する注記を整理しました。架空商品・ポートフォリオの説明はフッターと購入デモ内に維持。Frameに表示されないFAQの閉じた回答、ヘッダー、モバイル固定CTAは既存内容を維持しています。
+
+フッターの既存SVGを幅193px・右寄せに変更し、縦横比を維持。画像の再生成・Figmaファイルの変更は行っていません。「04 / YOUR FIRST BOTTLE」の崩れたレイアウトは取り込まず、既存のレスポンシブ配置を維持しています。

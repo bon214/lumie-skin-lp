@@ -105,7 +105,7 @@
 .footer-home { font:13px/1.8 Georgia,serif; letter-spacing:.1em; color:#5F5750; text-decoration:none; padding:12px 0; }
 .footer-home span { margin-left:12px; }
 .footer-top p { font-size:13px; color:#5F5750; }
-.editorial-footer .footer-wordmark { font:400 clamp(50px,12.1vw,174px)/1.45 Georgia,serif; letter-spacing:.075em; white-space:nowrap; color:#80564D; padding-block:26px; }
+.editorial-footer .footer-wordmark { display:flex; justify-content:flex-end; padding-block:26px; }
 .footer-bottom { border-top:1px solid #C8BAA9; padding-top:28px; }
 .footer-bottom nav { display:flex; flex-wrap:wrap; gap:12px 28px; margin-bottom:30px; }
 .footer-bottom nav a { font-size:13px; padding:6px 0; color:#5F5750; text-decoration:none; }
@@ -169,7 +169,6 @@
   .closing-section h2 { font-size:28px; letter-spacing:.01em; }
   .footer-top { display:block; }
   .footer-top p { margin-top:12px; }
-  .editorial-footer .footer-wordmark { font-size:11.7vw; letter-spacing:.035em; padding-block:30px; }
   .footer-bottom nav { gap:10px 22px; }
   .hero-summary { padding-block:36px; }
   .hero-summary-name { font-size:21px; }
@@ -186,4 +185,4 @@
 
 /* Use the supplied vector lockup in all brand-signature placements. */
 .signature img { display:block; width:180px; max-width:100%; height:auto; }
-.editorial-footer .footer-wordmark img { display:block; width:100%; height:auto; }
+.editorial-footer .footer-wordmark img { display:block; width:193px; max-width:100%; height:auto; }
