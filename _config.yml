@@ -1,0 +1,14 @@
+repository: bon214/lumie-skin-lp
+url: https://bon214.github.io
+baseurl: /lumie-skin-lp
+theme: null
+plugins:
+  - jekyll-github-metadata
+exclude:
+  - README.md
+  - scripts
+  - tests
+  - video
+  - Gemfile
+  - Gemfile.lock
+  - vendor

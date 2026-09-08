@@ -1,0 +1,19 @@
+.site-update-notice {
+  position:fixed; z-index:120; left:50%; bottom:max(20px,env(safe-area-inset-bottom));
+  transform:translateX(-50%); width:min(540px,calc(100% - 32px)); box-sizing:border-box;
+  display:flex; align-items:center; gap:18px; padding:16px 20px;
+  color:#3C3734; background:#FFFDFC; border:1px solid #D8B8AD; border-radius:6px;
+  box-shadow:0 8px 32px #3c37341f; font:14px/1.7 'Noto Sans JP',sans-serif;
+}
+.site-update-notice p { margin:0; flex:1; }
+.site-update-notice button {
+  flex-shrink:0; min-height:44px; padding:10px 16px; border:0; border-radius:24px;
+  color:#FFFDFC; background:#8C5F57; font:inherit; cursor:pointer;
+}
+.site-update-notice button:focus-visible { outline:2px solid #3C3734; outline-offset:4px; }
+.site-update-notice button:hover { background:#744B45; }
+@media (max-width:540px) {
+  .site-update-notice { align-items:stretch; flex-direction:column; gap:10px; padding:14px 16px; }
+}
+
+/* Release notices follow the same warm palette as the landing page. */

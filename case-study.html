@@ -1,12 +1,18 @@
-<!DOCTYPE html>
+---
+layout: release
+---
+{% raw %}<!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="utf-8">
+<meta name="site-version" content="__LUMIE_RELEASE__">
+<link rel="stylesheet" href="./site-update.css?v=__LUMIE_RELEASE__">
+<script defer src="./site-update.js?v=__LUMIE_RELEASE__"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>LUMIE SKIN 制作解説 | 自主制作ポートフォリオ</title>
 <meta name="description" content="架空のスキンケアLP LUMIE SKIN の制作解説。想定する顧客、情報設計、デザインの意図、AIを活用した制作工程と実装範囲をご紹介します。">
 <meta name="theme-color" content="#F7F3EE">
-<link rel="icon" href="./lumie-mark.svg?v=20260907-logo" type="image/svg+xml" sizes="any">
+<link rel="icon" href="./lumie-mark.svg?v=__LUMIE_RELEASE__" type="image/svg+xml" sizes="any">
 <meta property="og:title" content="LUMIE SKIN — 制作解説">
 <meta property="og:description" content="静かな世界観と、商品を理解して選べる導線。スキンケアLPの自主制作事例。">
 <meta property="og:type" content="website">
@@ -53,11 +59,11 @@ footer { padding-block:32px; border-top:1px solid #D8D4CD; font-size:13px; color
 </style>
 </head>
 <body>
-<header><a href="./index.html" aria-label="LUMIE SKIN サイトへ"><img src="./lumie-logo.svg?v=20260907-logo" alt="LUMIE SKIN"></a><a href="./index.html">サイトを見る ↗</a></header>
+<header><a href="./index.html" aria-label="LUMIE SKIN サイトへ"><img src="./lumie-logo.svg?v=__LUMIE_RELEASE__" alt="LUMIE SKIN"></a><a href="./index.html">サイトを見る ↗</a></header>
 <main>
 <section class="intro">
 <div><p class="eyebrow">SELF-INITIATED PROJECT / SKINCARE LP</p><h1>静かな世界観を、<br>選びやすさへ。</h1><p>架空のスキンケアブランド「LUMIE SKIN」のランディングページ。商品への共感から、成分・使い方・価格の理解へ進める構成を目指しました。</p><p class="note">自主制作／実在する企業からの受託案件ではありません。</p><a class="button" href="./index.html">完成したサイトを見る</a></div>
-<img src="./assets/images/calm-veil-serum.jpg" alt="乳白色のボトルとローズ色のスポイトで表現した架空の保湿美容液" width="1200" height="1200" fetchpriority="high">
+<img src="./assets/images/calm-veil-serum.jpg?v=__LUMIE_RELEASE__" alt="乳白色のボトルとローズ色のスポイトで表現した架空の保湿美容液" width="1200" height="1200" fetchpriority="high">
 </section>
 <section aria-labelledby="brief-title"><p class="eyebrow">01 / BRIEF</p><h2 id="brief-title">想定した課題と、制作の目的</h2><dl><dt>想定する顧客</dt><dd>乾燥が気になる一方で、重い使用感や複雑なスキンケアを避けたい人。朝晩の生活に取り入れやすい保湿美容液を探している、という仮説を置きました。</dd><dt>想定する課題</dt><dd>ブランドの雰囲気だけでは、商品の役割や価格条件が伝わりにくい。商品理解に必要な情報と、次に進む操作を明確にすること。</dd><dt>制作の目的</dt><dd>スキンケア商材の世界観、スマートフォンでの読みやすさ、購入を検討する流れを、一つのLPとして表現すること。</dd><dt>商品設定</dt><dd>保湿美容液30mL、初回限定2,980円（税込）、送料無料・単品購入。成分・使用感・価格は作品内の架空設定です。</dd></dl></section>
 <section aria-labelledby="design-title"><p class="eyebrow">02 / DESIGN DECISIONS</p><h2 id="design-title">デザインに込めた意図</h2><div class="cards"><article class="card"><h3>余白と、温かい白</h3><p>「うるおいの余白」を軸に、生成りの背景と落ち着いたローズ色を採用。淡い色は装飾に使い、説明文には読み取れる濃さを持たせています。下層も大きな写真と明朝体の見出し、細い罫線を組み合わせ、最後の購入案内とフッターまで色調を統一しました。</p></article><article class="card"><h3>写真で伝える、ブランドの空気感</h3><p>トップを画面いっぱいの写真で構成し、PCでは左にコピー、右に商品を配置。スマートフォンでは上にコピーとボタン、下に商品を見せ、文字との重なりを避けています。価格と詳しい説明は直下に整理しました。</p></article><article class="card"><h3>ゆっくり、控えめな動き</h3><p>写真と文章の段階表示、スクロールに合わせた微細な写真の動きを実装。端末の「動きを減らす」設定に応じて演出を停止します。</p></article></div></section>
@@ -68,3 +74,4 @@ footer { padding-block:32px; border-top:1px solid #D8D4CD; font-size:13px; color
 <footer>© 2026 LUMIE SKIN (fictional) — 自主制作ポートフォリオ</footer>
 </body>
 </html>
+{% endraw %}
