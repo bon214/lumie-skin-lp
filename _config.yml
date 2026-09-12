@@ -6,6 +6,7 @@ plugins:
   - jekyll-github-metadata
 exclude:
   - README.md
+  - ANALYTICS.md
   - scripts
   - tests
   - video

@@ -57,6 +57,7 @@
     if (manual) target.searchParams.set('_lumie_retry', String(Date.now()));
     writeState({ version: pending, y: window.scrollY, at: Date.now(), attempts: [...attempts, Date.now()] });
     navigating = true;
+    try { window.LumieAnalytics?.prepareUpdate(target.href); } catch { /* Analytics must never block an update. */ }
     location.replace(target.href);
   }
 

@@ -6,6 +6,9 @@ layout: release
 <head>
 <meta charset="utf-8">
 <meta name="site-version" content="__LUMIE_RELEASE__">
+<link rel="stylesheet" href="./analytics.css?v=__LUMIE_RELEASE__">
+<script defer src="./analytics-config.js?v=__LUMIE_RELEASE__"></script>
+<script defer src="./analytics.js?v=__LUMIE_RELEASE__"></script>
 <link rel="stylesheet" href="./site-update.css?v=__LUMIE_RELEASE__">
 <script defer src="./site-update.js?v=__LUMIE_RELEASE__"></script>
 <title>LUMIE SKIN | スキンケアLP・ポートフォリオ</title>
@@ -62,7 +65,7 @@ layout: release
         <a href="#ingredients" style="font-size:13.5px; color:#3C3734; text-decoration:none; padding:8px 2px" style-hover="color:#8C5F57" style-focus="outline:2px solid #8C5F57; outline-offset:4px">成分</a>
         <a href="#howto" style="font-size:13.5px; color:#3C3734; text-decoration:none; padding:8px 2px" style-hover="color:#8C5F57" style-focus="outline:2px solid #8C5F57; outline-offset:4px">使い方</a>
         <a href="#faq" style="font-size:13.5px; color:#3C3734; text-decoration:none; padding:8px 2px; font-family:Georgia, serif; letter-spacing:.06em" style-hover="color:#8C5F57" style-focus="outline:2px solid #8C5F57; outline-offset:4px">FAQ</a>
-        <a href="#price" style="font-size:13px; letter-spacing:.06em; color:#FFFDFC; background:#8C5F57; text-decoration:none; padding:12px 22px; border-radius:999px; white-space:nowrap" style-hover="background:#744B45" style-focus="outline:2px solid #3C3734; outline-offset:3px">商品・価格を見る</a>
+        <a data-analytics-event="view_product_price" data-analytics-placement="header" href="#price" style="font-size:13px; letter-spacing:.06em; color:#FFFDFC; background:#8C5F57; text-decoration:none; padding:12px 22px; border-radius:999px; white-space:nowrap" style-hover="background:#744B45" style-focus="outline:2px solid #3C3734; outline-offset:3px">商品・価格を見る</a>
       </nav>
       <button type="button" onClick="{{ toggleNav }}" aria-label="メニュー" aria-expanded="{{ navExpanded }}" aria-controls="mobile-menu" style="display:{{ burgerDisplay }}; width:48px; height:48px; align-items:center; justify-content:center; flex-direction:column; gap:5px; background:transparent; border:none; cursor:pointer; padding:0" style-focus="outline:2px solid #8C5F57; outline-offset:2px">
         <span style="display:block; width:22px; height:1.5px; background:#3C3734"></span>
@@ -76,7 +79,7 @@ layout: release
       <a href="#ingredients" onClick="{{ closeNav }}" style="display:block; padding:14px 2px; font-size:15px; color:#3C3734; text-decoration:none; border-bottom:1px solid rgba(167,173,163,.24)">成分</a>
       <a href="#howto" onClick="{{ closeNav }}" style="display:block; padding:14px 2px; font-size:15px; color:#3C3734; text-decoration:none; border-bottom:1px solid rgba(167,173,163,.24)">使い方</a>
       <a href="#faq" onClick="{{ closeNav }}" style="display:block; padding:14px 2px; font-size:15px; color:#3C3734; text-decoration:none; border-bottom:1px solid rgba(167,173,163,.24); font-family:Georgia, serif; letter-spacing:.06em">FAQ</a>
-      <a href="#price" onClick="{{ closeNav }}" style="display:block; margin-top:16px; text-align:center; padding:16px; font-size:15px; color:#FFFDFC; background:#8C5F57; border-radius:999px; text-decoration:none">商品・価格を見る</a>
+      <a data-analytics-event="view_product_price" data-analytics-placement="mobile_menu" href="#price" onClick="{{ closeNav }}" style="display:block; margin-top:16px; text-align:center; padding:16px; font-size:15px; color:#FFFDFC; background:#8C5F57; border-radius:999px; text-decoration:none">商品・価格を見る</a>
     </div>
   </header>
 
@@ -87,7 +90,7 @@ layout: release
     <div class="hero-copy" data-reveal="1">
       <p class="hero-eyebrow">Calm Veil Serum <span>／ 保湿美容液</span></p>
       <h1 id="hero-title">ゆらぎやすい毎日に、<br>うるおいの余白を。</h1>
-      <a id="hero-cta" class="hero-button" href="#price">商品・価格を見る<span aria-hidden="true"> →</span></a>
+      <a data-analytics-event="view_product_price" data-analytics-placement="hero" id="hero-cta" class="hero-button" href="#price">商品・価格を見る<span aria-hidden="true"> →</span></a>
     </div>
     <a class="hero-scroll" href="#hero-summary"><span aria-hidden="true">↓</span> 商品を知る</a>
   </section>
@@ -170,7 +173,7 @@ layout: release
         <div class="product-visual" data-reveal="1"><figure class="editorial-photo" data-photo-frame="1"><img src="assets/images/calm-veil-serum.jpg?v=__LUMIE_RELEASE__" alt="乳白色のボトルとローズ色のスポイトの Calm Veil Serum 30mL" width="1200" height="1200" loading="lazy" decoding="async"></figure><span class="product-visual-caption">Your everyday essential.</span></div>
         <div class="product-copy" data-reveal="1"><p class="editorial-eyebrow">LUMIE SKIN</p><h2 id="price-title">Calm Veil Serum</h2><p class="product-subtitle">カームヴェール セラム / 保湿美容液</p><p class="editorial-body">毎日の保湿に、心地よい一本を。</p>
           <div class="product-offer"><p class="product-regular">通常価格 4,400円（税込）</p><p class="product-amount"><span>初回限定</span><strong>2,980</strong><span>円（税込）</span></p><p class="product-terms">送料無料 · 1回のみのお届け</p></div>
-          <button class="editorial-button" type="button" onClick="{{ openModal }}">2,980円で試してみる<span aria-hidden="true">→</span></button>
+          <button class="editorial-button" type="button" data-analytics-event="open_purchase_demo" data-analytics-placement="product" onClick="{{ openModal }}">2,980円で試してみる<span aria-hidden="true">→</span></button>
           <dl class="product-spec"><dt>内容量</dt><dd>30mL（約1か月）</dd><dt>使用方法</dt><dd>朝晩、化粧水の後に2〜3滴</dd><dt>分類</dt><dd>化粧品（保湿美容液）</dd><dt>お届け</dt><dd>定期購入ではありません<br>送料無料</dd></dl>
         </div>
       </div>
@@ -183,16 +186,16 @@ layout: release
 <div class="faq-item"><h3><button type="button" id="faq-b-4" aria-expanded="{{ f4e }}" aria-controls="faq-p-4" onClick="{{ f4t }}"><span class="faq-question"><span class="faq-q" aria-hidden="true">Q.</span>使用時に注意することはありますか</span><span class="faq-toggle" aria-hidden="true">{{ f4i }}</span></button></h3><div id="faq-p-4" role="region" aria-labelledby="faq-b-4" class="faq-answer" style="display:{{ f4d }}">お肌に合わないときは使用を中止してください。傷や湿疹などの異常があるとき、また目に入ったときはご使用を避け、水で洗い流してください。</div></div>
 <div class="faq-item"><h3><button type="button" id="faq-b-5" aria-expanded="{{ f5e }}" aria-controls="faq-p-5" onClick="{{ f5t }}"><span class="faq-question"><span class="faq-q" aria-hidden="true">Q.</span>定期購入になりますか</span><span class="faq-toggle" aria-hidden="true">{{ f5i }}</span></button></h3><div id="faq-p-5" role="region" aria-labelledby="faq-b-5" class="faq-answer" style="display:{{ f5d }}">定期購入ではありません。初回限定価格も1回のみのお届けです。なお本サイトは自主制作のデモのため、実際の販売は行っていません。</div></div></div></div></section>
 
-  <section id="closing" class="editorial-section closing-section" aria-labelledby="closing-title"><div class="closing-inner" data-reveal="1"><p class="editorial-eyebrow">A little care, a little calm.</p><h2 id="closing-title">肌と向き合う時間を、<br>さらに心地よく。</h2><p>Calm Veil Serum 30mL<br>初回限定 2,980円（税込）／送料無料</p><button type="button" class="editorial-button closing-button" onClick="{{ openModal }}">この一本から、はじめる<span aria-hidden="true">→</span></button></div></section>
+  <section id="closing" class="editorial-section closing-section" aria-labelledby="closing-title"><div class="closing-inner" data-reveal="1"><p class="editorial-eyebrow">A little care, a little calm.</p><h2 id="closing-title">肌と向き合う時間を、<br>さらに心地よく。</h2><p>Calm Veil Serum 30mL<br>初回限定 2,980円（税込）／送料無料</p><button type="button" class="editorial-button closing-button" data-analytics-event="open_purchase_demo" data-analytics-placement="closing" onClick="{{ openModal }}">この一本から、はじめる<span aria-hidden="true">→</span></button></div></section>
 
-  <footer class="editorial-footer"><div class="section-shell"><div class="footer-top"><a href="#top" class="footer-home">BACK TO TOP <span aria-hidden="true">↑</span></a><p>ゆらぎやすい毎日に、うるおいの余白を。</p></div><p class="footer-wordmark"><img src="lumie-logo.svg?v=__LUMIE_RELEASE__" alt="LUMIE SKIN" width="312" height="44" loading="lazy"></p><div class="footer-bottom"><nav aria-label="フッターナビゲーション"><a href="#about">商品について</a><a href="#features">特徴</a><a href="#ingredients">成分</a><a href="#howto">使い方</a><a href="#price">価格</a><a href="#faq">FAQ</a><a href="./case-study.html">このサイトの制作解説</a></nav><p class="editorial-note">本サイトは自主制作のポートフォリオ作品です。ブランド・商品は架空であり、実際の販売や購入手続きは行っていません。<br>掲載写真にはAI生成画像を使用しています。</p><p class="footer-copyright">© 2026 LUMIE SKIN (fictional)</p></div></div></footer>
+  <footer class="editorial-footer"><div class="section-shell"><div class="footer-top"><a href="#top" class="footer-home">BACK TO TOP <span aria-hidden="true">↑</span></a><p>ゆらぎやすい毎日に、うるおいの余白を。</p></div><p class="footer-wordmark"><img src="lumie-logo.svg?v=__LUMIE_RELEASE__" alt="LUMIE SKIN" width="312" height="44" loading="lazy"></p><div class="footer-bottom"><nav aria-label="フッターナビゲーション"><a href="#about">商品について</a><a href="#features">特徴</a><a href="#ingredients">成分</a><a href="#howto">使い方</a><a data-analytics-event="view_product_price" data-analytics-placement="footer" href="#price">価格</a><a href="#faq">FAQ</a><a data-analytics-event="view_case_study" data-analytics-placement="footer" href="./case-study.html">このサイトの制作解説</a><a href="./privacy.html">プライバシー・計測設定</a></nav><p class="editorial-note">本サイトは自主制作のポートフォリオ作品です。ブランド・商品は架空であり、実際の販売や購入手続きは行っていません。<br>掲載写真にはAI生成画像を使用しています。</p><p class="footer-copyright">© 2026 LUMIE SKIN (fictional)</p></div></div></footer>
 
   <div id="sticky-cta" style="display:{{ stickyDisplay }}; position:fixed; left:0; right:0; bottom:0; z-index:70; background:rgba(255,253,252,.96); backdrop-filter:blur(10px); border-top:1px solid rgba(167,173,163,.36); padding:10px clamp(14px,4vw,20px) calc(10px + env(safe-area-inset-bottom)); align-items:center; gap:12px; justify-content:space-between; box-shadow:0 -8px 24px -18px rgba(60,55,52,.5)">
     <div style="min-width:0">
       <p style="margin:0; font-size:13px; color:#646B62; letter-spacing:.06em">初回限定・送料無料</p>
       <p style="margin:0; display:flex; align-items:baseline; gap:4px; color:#8C5F57"><strong style="font-family:Georgia, serif; font-size:21px; font-weight:400">2,980</strong><span style="font-size:13px">円（税込）</span></p>
     </div>
-    <button type="button" onClick="{{ openModal }}" style="flex:none; min-height:48px; padding:0 22px; background:#8C5F57; color:#FFFDFC; font-size:14.5px; letter-spacing:.04em; border:none; border-radius:999px; cursor:pointer" style-focus="outline:2px solid #3C3734; outline-offset:2px">試してみる</button>
+    <button type="button" data-analytics-event="open_purchase_demo" data-analytics-placement="sticky" onClick="{{ openModal }}" style="flex:none; min-height:48px; padding:0 22px; background:#8C5F57; color:#FFFDFC; font-size:14.5px; letter-spacing:.04em; border:none; border-radius:999px; cursor:pointer" style-focus="outline:2px solid #3C3734; outline-offset:2px">試してみる</button>
   </div>
 
   <div id="demo-overlay" style="display:{{ modalDisplay }}; position:fixed; inset:0; z-index:100; align-items:center; justify-content:center; padding:20px; background:rgba(60,55,52,.42); backdrop-filter:blur(3px)">
