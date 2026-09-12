@@ -35,7 +35,7 @@
     notice.setAttribute('aria-label', 'サイトの更新');
     const message = document.createElement('p');
     message.setAttribute('role', 'status');
-    message.textContent = '新しい内容を公開しました。操作が落ち着いたら自動で更新します。';
+    message.textContent = '新しい内容を公開しました。操作が一段落したら自動で更新します。';
     const button = document.createElement('button');
     button.type = 'button';
     button.textContent = '今すぐ更新';
